@@ -7,7 +7,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+console("APP主模块")
 export default {
   name: 'App',
   components: {
