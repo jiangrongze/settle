@@ -1,0 +1,46 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+}
+
+button {
+    margin: 0;
+    padding: 0; 
+    border: 0;
+    background: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    appearance: none;
+    
+}
+
+body {
+    font:14px 'Helvetica Neue', Helvetica,Arial
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.baseA .baseB{
+    width:200px;
+    height:150px;
+    padding:10px;
+    margin-top:10px;
+    border:3px solid #000;
+    border-radius:5px;
+    font-size:20px;
+}
