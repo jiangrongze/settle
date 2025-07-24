@@ -39,7 +39,8 @@ import BaseB from './components/BaseB.vue';
 export default {
   data() {
     return {
-      list1:JSON.parse(localStorage.getItem('list1')) || [
+     // console(JSON.parse(localStorage.getItem('list1')).tos )
+      list1:JSON.parse(localStorage.getItem('list1')) != "" ? JSON.parse(localStorage.getItem('list1')) : [
         { id: 1, name: '打篮球' },
         { id: 2, name: '看电影' },
         { id: 3, name: '逛街' }

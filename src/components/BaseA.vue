@@ -22,7 +22,7 @@ export default {
 
     data() {
         return {
-            msg: "XZCZC"
+            msg: "XZC1111113232321ZC"
 
         }
 
