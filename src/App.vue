@@ -15,7 +15,8 @@
 <br/><br/><br/>
   <BaseA></BaseA>
     <BaseB></BaseB>
-
+    <BaseC></BaseC>
+    <GrandSon></GrandSon>
   </section>
 
 
@@ -33,19 +34,33 @@ import TodoMain from './components/TodoMain.vue';
 import TodoFooter from './components/TodoFooter.vue';
 import BaseA from './components/BaseA.vue';
 import BaseB from './components/BaseB.vue';
-
+import BaseC from './components/BaseC.vue';
+import GrandSon from './components/GrandSon.vue';
 
 // console("APP主模块")
 export default {
+
+  provide(){
+    return{
+      color: this.color,
+      userInfo: this.userInfo
+    }
+  },
+
   data() {
     return {
      // console(JSON.parse(localStorage.getItem('list1')).tos )
       list1:JSON.parse(localStorage.getItem('list1')) != "" ? JSON.parse(localStorage.getItem('list1')) : [
+    //  list1:[
         { id: 1, name: '打篮球' },
         { id: 2, name: '看电影' },
         { id: 3, name: '逛街' }
-      ]
-
+      ],
+       color: 'red',
+      userInfo: {
+        name: '张三',
+        age:18
+      }
     }
   },
 
@@ -58,7 +73,9 @@ export default {
     TodoFooter,
 
     BaseA,
-    BaseB
+    BaseB,
+    BaseC,
+    GrandSon
 
   },
   methods: {
