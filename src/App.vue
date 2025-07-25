@@ -21,8 +21,18 @@
     <br />
     <input v-model="msg" type="text" />
     <input :value="msg2" @input="inpt" type="text" />
-    <input :value="msg3" @input="msg=$event.target.value" type="text" />
+    <input :value="msg3" @input="msg = $event.target.value" type="text" />
+    <br />
+    <br />
+    <button class="logout" @click="isShow = !isShow">退出按钮</button>
 
+    <br />
+    <br />
+    <BaseDialog :visible.sync="isShow"></BaseDialog>
+
+    <!-- ********************************************** -->
+    <BaseSelect :cityId="selectId" @changId="selectId=$event" ></BaseSelect>
+    <BaseSelectV v-model="SelectId1"></BaseSelectV>
   </section>
 
   <!-- </div> -->
@@ -38,6 +48,9 @@ import BaseA from "./components/BaseA.vue";
 import BaseB from "./components/BaseB.vue";
 import BaseC from "./components/BaseC.vue";
 import GrandSon from "./components/GrandSon.vue";
+import BaseDialog from "./components/BaseDialog.vue";
+import BaseSelect from "./components/BaseSelect.vue";
+import BaseSelectV from "./components/BaseSelectV.vue";
 
 // console("APP主模块")
 export default {
@@ -55,11 +68,11 @@ export default {
         JSON.parse(localStorage.getItem("list1")) != ""
           ? JSON.parse(localStorage.getItem("list1"))
           : [
-              //  list1:[
-              { id: 1, name: "打篮球" },
-              { id: 2, name: "看电影" },
-              { id: 3, name: "逛街" },
-            ],
+            //  list1:[
+            { id: 1, name: "打篮球" },
+            { id: 2, name: "看电影" },
+            { id: 3, name: "逛街" },
+          ],
       color: "red",
       userInfo: {
         name: "张三",
@@ -68,6 +81,13 @@ export default {
       msg: "我是msg1",
       msg2: "我是msg2",
       msg3: "我是msg3",
+
+      isShow: false,
+      selectId:'102',
+      selectId1:'103'
+
+
+
     };
   },
 
@@ -83,6 +103,9 @@ export default {
     BaseB,
     BaseC,
     GrandSon,
+    BaseDialog,
+    BaseSelect,
+     BaseSelectV
   },
   methods: {
     inpt(e) {
