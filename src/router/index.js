@@ -13,17 +13,17 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
     routes: [
-        { path: '/',redirect:'home' },
+        { path: '/', redirect: 'home' },
         { path: '/findpage', component: FindPage },
         { path: '/mypage', component: MyPage },
         { path: '/friendpage', component: FriendPage },
         { path: '/home', component: Home },
- 
-        { path: '/search/:words?', component: Search },
- { path: '*', component: NotFound }
+
+        { name:'search', path: '/search/:words?', component: Search },
+        { path: '*', component: NotFound }
 
     ],
-    mode:"history",
+    mode: "history",
     linkActiveClass: 'active',
     linkExactActiveClass: 'exact-active'
 
