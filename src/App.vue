@@ -1,5 +1,51 @@
 <template>
   <div id="app">
+
+    <div class="link">
+      <router-link to="/home">主页</router-link>
+      <router-link to="/search">搜索页</router-link>
+<br/>
+
+    </div>
+    <router-view></router-view>
+
+    <br />
+    <div>---------------------------------------------------------</div>
+
+    <template>
+      <div>
+        <div class="footer_wrap">
+          <a href="#/findpage">发现音乐</a>
+          <a href="#/mypage">我的音乐</a>
+          <a href="#/friendpage">朋友音乐</a>
+
+        </div>
+        <div class="top">
+          <!-- <router-view>34343</router-view> -->
+        </div>
+      </div>
+
+    </template>
+    <br /><br />
+
+    <template>
+      <div>
+        <div class="footer_wrap">
+          <router-link to="/findpage">发现音乐</router-link>
+          <router-link to="/mypage">我的音乐</router-link>
+          <router-link to="/friendpage">朋友音乐</router-link>
+
+        </div>
+        <div class="top">
+          <!-- <router-view>34343</router-view> -->
+        </div>
+      </div>
+
+    </template>
+
+    <br />
+    <div>---------------------------------------------------------</div>
+
     <div class="box1">
       <h1>MyTable组件</h1>
       <p>这是一个自定义的表格组件</p>
@@ -271,11 +317,11 @@ export default {
         JSON.parse(localStorage.getItem("list1")) != ""
           ? JSON.parse(localStorage.getItem("list1"))
           : [
-              //  list1:[
-              { id: 1, name: "打篮球" },
-              { id: 2, name: "看电影" },
-              { id: 3, name: "逛街" },
-            ],
+            //  list1:[
+            { id: 1, name: "打篮球" },
+            { id: 2, name: "看电影" },
+            { id: 3, name: "逛街" },
+          ],
       color: "red",
       userInfo: {
         name: "张三",
@@ -381,7 +427,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 .loading::before {
   content: "加载中...";
   position: absolute;
@@ -394,6 +440,7 @@ export default {
   width: 100%;
   height: 100%;
 }
+
 .box1 {
   width: 500px;
   height: 500px;
@@ -401,38 +448,47 @@ export default {
   margin: 20px;
   overflow: auto;
 }
+
 .news-item {
   display: flex;
   padding: 10px;
   border-bottom: 1px solid #eee;
 }
+
 .news-item .left {
   flex: 1;
 }
+
 .news-item .left .title {
   font-weight: bold;
 }
+
 .news-item .left .info {
   color: #999;
 }
+
 .news-item .right {
   width: 100px;
   height: 100px;
   margin-left: 10px;
 }
+
 .news-item .right img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .news-item .right img:hover {
   transform: scale(1.1);
   transition: transform 0.3s;
 }
+
 .news-item .right img:active {
   transform: scale(0.9);
   transition: transform 0.1s;
 }
+
 .logout {
   top: 10px;
   right: 10px;
@@ -442,9 +498,11 @@ export default {
   border: none;
   cursor: pointer;
 }
+
 .logout:hover {
   background-color: #c00;
 }
+
 .logout:active {
   background-color: #900;
 }
@@ -463,4 +521,46 @@ export default {
     border-radius: 50%;
   }  */
 }
+
+.footer_wrap a {
+  flex: 1;
+  text-decoration: none;
+  padding: 20px 0;
+  line-height: 20px;
+  background-color: #063f80;
+  color: #900;
+  border: 1px solid black;
+}
+
+
+.footer_wrap a.active {
+  background-color: #6b0ee4;
+}
+
+.footer_wrap a.exact-active {
+  background-color: #e40ec0;
+}
+
+.footer_wrap a:hover {
+  background-color: rgb(12, 151, 65);
+}
+
+.footer_wrap a.router-link-active {
+  background-color: #ffffff;
+}
+
+.footer_wrap a.router-link-exact-active {
+  background-color: #b7f311;
+}
+
+.link {
+ height:50px;
+ line-height:50px;
+ background-color:#063f80;
+ display:flex;
+ margin:-8px -8px 0 -8px;
+ margin-bottom:50px;
+
+}
+
 </style>
