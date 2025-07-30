@@ -1,8 +1,22 @@
 <template>
   <div id="app">
 
+
+    <template>
+      <div class="h9-wrapper4">
+
+        <router-view></router-view>
+
+      </div>
+
+    </template>
+
+    <br />
+    <div>---------------------------------------------------------</div>
+
+      <!-- <router-link to="/home">主页</router-link> -->
     <div class="link">
-      <router-link to="/home">主页</router-link>
+      <router-link to="/layout">主页</router-link>
       <router-link to="/search">搜索页</router-link>
 <br/>
 
@@ -427,7 +441,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
 .loading::before {
   content: "加载中...";
   position: absolute;
@@ -560,6 +574,13 @@ export default {
  display:flex;
  margin:-8px -8px 0 -8px;
  margin-bottom:50px;
+
+}
+
+.h9-wrapper4{
+width: 100%;
+height: 100%;
+background-color: #063f80;
 
 }
 

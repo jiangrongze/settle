@@ -1,6 +1,6 @@
 <template>
   <div>
-    777
+    收藏
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    777
+    喜欢
   </div>
 </template>
 
